@@ -37,18 +37,15 @@ h1 {
   font-size: 0.9rem;
   color: #555;
 }
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  text-align: center;
+<body>
+  <div class="container">
+    <h2 class="coming-soon">COMING SOON.</h2>
+    <img src="IMG_0052.png" alt="Ryze Records Logo" style="width: 200px; margin-top: 20px;">
+    <h1>RYZE RECORDS</h1>
+    <p class="tagline">A lift up from your downs</p>
+    <p class="footer">Since 2025</p>
+  </div>
+</body>
 }
 
 img {
