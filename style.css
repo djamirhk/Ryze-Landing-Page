@@ -2,64 +2,39 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000;
-  font-family: 'Arial', sans-serif;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
 .container {
-  padding: 20px;
+  padding-top: 100px;
+}
+
+.coming-soon {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
 .logo {
-  max-width: 150px;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  color: #fff;
-}
-
-.tagline {
-  font-size: 1.1rem;
-  color: #aaa;
-  margin-top: 10px;
-}
-
-.footer {
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #555;
-}
-<body>
-  <div class="container">
-    <h2 class="coming-soon">COMING SOON.</h2>
-    <img src="IMG_0052.png" alt="Ryze Records Logo" style="width: 200px; margin-top: 20px;">
-    <h1>RYZE RECORDS</h1>
-    <p class="tagline">A lift up from your downs</p>
-    <p class="footer">Since 2025</p>
-  </div>
-</body>
-}
-
-img {
   width: 200px;
   margin-bottom: 30px;
 }
 
-.tagline {
-  font-size: 18px;
+h1 {
+  font-size: 32px;
   margin: 10px 0;
+}
+
+.tagline {
+  font-size: 16px;
   color: #ccc;
+  margin: 5px 0;
 }
 
 .footer {
   font-size: 14px;
-  color: #888;
+  color: #777;
+  margin-top: 10px;
 }
