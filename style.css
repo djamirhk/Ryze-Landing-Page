@@ -37,3 +37,32 @@ h1 {
   font-size: 0.9rem;
   color: #555;
 }
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.footer {
+  font-size: 14px;
+  color: #888;
+}
