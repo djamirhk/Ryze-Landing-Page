@@ -155,7 +155,8 @@ button:hover {
   .desktop-logo {
     width: 240px;
     height: auto;
-    /* ❌ No glow anymore */
-    filter: none;
+    filter: none !important;         /* 🧼 Clear glow */
+    box-shadow: none !important;     /* 🧼 Remove any shadow */
+    text-shadow: none !important;    /* 🧼 Just in case */
   }
 }
