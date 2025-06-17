@@ -1,0 +1,100 @@
+
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --glow-color: #a259ff;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+#background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0d0d2b 0%, #000 100%);
+  z-index: -2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+.coming-soon {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.logo-image {
+  display: none;
+  width: 220px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+#mobile-bolt-container {
+  display: block;
+  width: 100vw;
+  height: 300px;
+}
+
+.instagram-link {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.instagram-icon {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 6px var(--glow-color));
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-size: 1rem;
+  width: 250px;
+}
+
+button[type="submit"] {
+  background: var(--glow-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-image {
+    display: block;
+  }
+
+  #mobile-bolt-container {
+    display: none;
+  }
+}
