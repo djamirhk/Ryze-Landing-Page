@@ -32,6 +32,13 @@ body, html {
   position: relative;
 }
 
+/* Add extra top padding ONLY on mobile to prevent overlap with fixed bolt */
+@media (max-width: 767px) {
+  .container {
+    padding-top: 160px;
+  }
+}
+
 .coming-soon {
   font-size: 1.8rem;
   font-weight: bold;
@@ -84,38 +91,40 @@ button:hover {
 }
 
 /* MOBILE */
-.mobile-bolt-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 40px;
-}
+@media (max-width: 767px) {
+  .mobile-bolt-container {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+  }
 
-.mobile-bolt {
-  width: 120px;
-  height: auto;
-  filter: drop-shadow(0 0 12px #a855f7) drop-shadow(0 0 24px #a855f7);
-  animation: pulseGlow 2s infinite;
-}
+  .mobile-bolt {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 12px #a855f7) drop-shadow(0 0 24px #a855f7);
+    animation: pulseGlow 2s infinite;
+  }
 
-.mobile-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0.75rem 0 0.25rem;
-}
+  .mobile-title {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
 
-.mobile-subtext {
-  font-size: 1rem;
-  font-style: italic;
-  color: #ccc;
-  margin-bottom: 1rem;
-}
+  .mobile-subtext {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #ccc;
+  }
 
-@keyframes pulseGlow {
-  0% { filter: drop-shadow(0 0 6px #a855f7); }
-  50% { filter: drop-shadow(0 0 16px #a855f7) drop-shadow(0 0 24px #a855f7); }
-  100% { filter: drop-shadow(0 0 6px #a855f7); }
+  @keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 6px #a855f7); }
+    50% { filter: drop-shadow(0 0 16px #a855f7) drop-shadow(0 0 24px #a855f7); }
+    100% { filter: drop-shadow(0 0 6px #a855f7); }
+  }
 }
 
 /* DESKTOP */
@@ -128,18 +137,12 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 80px; /* moved down */
     margin-bottom: 1rem;
   }
 
   .desktop-logo {
-    width: 200px;
+    width: 140px;  /* smaller */
     height: auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .desktop-logo-container {
-    display: none;
   }
 }
