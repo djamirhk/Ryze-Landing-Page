@@ -29,14 +29,19 @@ html, body {
   margin-bottom: 1rem;
 }
 
-/* Mobile: show bolt, hide preview logo */
+/* Mobile: show bolt, hide preview */
 .bolt {
   width: 100px;
   height: auto;
   animation: spinY 6s linear infinite;
-  filter: drop-shadow(0 0 25px var(--glow-color));
   transform-style: preserve-3d;
   display: block;
+
+  /* STRONG Glow effect for iPhone/mobile */
+  filter:
+    drop-shadow(0 0 10px var(--glow-color))
+    drop-shadow(0 0 20px var(--glow-color))
+    drop-shadow(0 0 30px var(--glow-color));
 }
 
 .logo-image {
@@ -46,7 +51,7 @@ html, body {
   margin-top: 1rem;
 }
 
-/* Desktop: hide bolt, show preview */
+/* Desktop: show preview only */
 @media screen and (min-width: 768px) {
   .bolt {
     display: none !important;
