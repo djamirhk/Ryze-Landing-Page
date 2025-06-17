@@ -6,17 +6,26 @@
   <title>Ryze Records</title>
   <link rel="stylesheet" href="style.css" />
   <meta property="og:title" content="Ryze Records" />
-  <meta property="og:description" content="Official site of Ryze Records. A lift up from your downs." />
+  <meta property="og:description" content="A lift up from your downs – official landing page of Ryze Records." />
   <meta property="og:image" content="https://ryzerecords.com/IMG_0052.png" />
   <meta property="og:url" content="https://ryzerecords.com" />
   <meta property="og:type" content="website" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-    <img src="IMG_0052.png" alt="Lightning Bolt" class="logo-glow mobile-only" />
-    <h1>COMING SOON</h1>
 
-    <form action="https://getform.io/f/amdmgjlb" method="POST" class="notify-form">
+    <!-- Glowing Bolt Image on Mobile Only -->
+    <img src="IMG_0052.png" alt="Lightning Bolt" class="bolt-mobile" />
+
+    <h1 class="coming-soon">COMING SOON</h1>
+
+    <!-- Notify Form -->
+    <form
+      action="https://getform.io/f/amdmgjlb"
+      method="POST"
+      class="notify-form"
+    >
       <input type="text" name="first-name" placeholder="First name" required />
       <input type="text" name="last-name" placeholder="Last name" required />
       <input type="email" name="email" placeholder="Your email" required />
@@ -24,9 +33,13 @@
       <button type="submit">Notify Me</button>
     </form>
 
-    <a href="https://instagram.com/ryzerecs" target="_blank" class="instagram-icon">
-      <img src="instagram.png" alt="Instagram" />
-    </a>
+    <!-- Instagram Button -->
+    <div class="instagram">
+      <a href="https://instagram.com/ryzerecs" target="_blank">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </div>
+
   </div>
 </body>
 </html>
