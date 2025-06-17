@@ -25,17 +25,18 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: flex-start;
+  min-height: 100vh;
   text-align: center;
   padding: 20px;
   position: relative;
 }
 
 .coming-soon {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin: 1.5rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 form {
@@ -82,12 +83,13 @@ button:hover {
   filter: drop-shadow(0 0 6px var(--glow-color));
 }
 
-/* Mobile Bolt */
+/* MOBILE */
 .mobile-bolt-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .mobile-bolt {
@@ -97,19 +99,26 @@ button:hover {
   animation: pulseGlow 2s infinite;
 }
 
-@keyframes pulseGlow {
-  0% {
-    filter: drop-shadow(0 0 6px #a855f7);
-  }
-  50% {
-    filter: drop-shadow(0 0 16px #a855f7) drop-shadow(0 0 24px #a855f7);
-  }
-  100% {
-    filter: drop-shadow(0 0 6px #a855f7);
-  }
+.mobile-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.75rem 0 0.25rem;
 }
 
-/* Desktop Overrides */
+.mobile-subtext {
+  font-size: 1rem;
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulseGlow {
+  0% { filter: drop-shadow(0 0 6px #a855f7); }
+  50% { filter: drop-shadow(0 0 16px #a855f7) drop-shadow(0 0 24px #a855f7); }
+  100% { filter: drop-shadow(0 0 6px #a855f7); }
+}
+
+/* DESKTOP */
 @media screen and (min-width: 768px) {
   .mobile-bolt-container {
     display: none;
@@ -119,6 +128,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
     margin-bottom: 1rem;
   }
 
@@ -128,7 +138,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .desktop-logo-container {
     display: none;
   }
