@@ -2,35 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryze Records</title>
+
+  <!-- Open Graph Meta -->
   <meta property="og:title" content="Ryze Records" />
-  <meta property="og:description" content="Official site of Ryze Records – A lift up from your downs." />
-  <meta property="og:image" content="https://ryzerecords.com/assets/IMG_0052.png" />
+  <meta property="og:description" content="Official site for Ryze Records. Join our launch list!" />
+  <meta property="og:image" content="https://ryzerecords.com/preview.JPG" />
   <meta property="og:url" content="https://ryzerecords.com" />
   <meta property="og:type" content="website" />
-  <title>Ryze Records</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="background"></div>
   <div class="container">
-    <!-- Mobile glowing bolt -->
-    <img src="IMG_0052.png" alt="Bolt Logo" class="bolt-mobile" />
+    <!-- MOBILE glowing bolt -->
+    <div class="mobile-bolt-container">
+      <img src="IMG_0052.png" alt="Lightning Bolt" class="mobile-bolt" />
+    </div>
 
-    <!-- Desktop bolt (non-glowing) -->
-    <img src="preview.JPG" alt="Bolt Logo" class="bolt-desktop" />
+    <h1 class="coming-soon">COMING SOON</h1>
 
-    <h1 class="title">COMING SOON</h1>
-
-    <form action="https://getform.io/f/amdmgjlb" method="POST" class="notify-form">
+    <!-- Getform Contact Form -->
+    <form action="https://getform.io/f/amdmgjlb" method="POST">
       <input type="text" name="first_name" placeholder="First Name" required />
       <input type="text" name="last_name" placeholder="Last Name" required />
       <input type="email" name="email" placeholder="Your email" required />
-      <input type="text" name="phone" placeholder="Your phone number" />
+      <input type="tel" name="phone" placeholder="Your phone" />
       <button type="submit">Notify Me</button>
     </form>
 
-    <a href="https://instagram.com/ryzerecs" target="_blank" class="instagram-icon">
-      <img src="instagram.png" alt="Instagram" />
+    <!-- Instagram -->
+    <a href="https://instagram.com/ryzerecs" class="instagram-link" target="_blank" rel="noopener noreferrer">
+      <img src="instagram.svg" alt="Instagram" class="instagram-icon" />
     </a>
   </div>
 </body>
