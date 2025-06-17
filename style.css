@@ -4,69 +4,40 @@
   --glow-color: #a259ff;
 }
 
-html, body {
+body, html {
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
 }
 
 #background {
   position: fixed;
   top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; height: 100vh;
   background: radial-gradient(ellipse at bottom, #0d0d2b 0%, #000 100%);
-  z-index: -2;
+  z-index: -1;
 }
 
-/* Main layout */
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 
-/* Coming soon text */
 .coming-soon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
-/* Mobile bolt glow */
-#mobile-bolt-container {
-  display: block;
-  margin-bottom: 1.5rem;
-}
-.mobile-bolt {
-  width: 120px;
-  height: auto;
-  filter: drop-shadow(0 0 6px var(--glow-color)) drop-shadow(0 0 12px var(--glow-color));
-  animation: pulseGlow 2s infinite;
-}
-
-@keyframes pulseGlow {
-  0% { filter: drop-shadow(0 0 6px var(--glow-color)); }
-  50% { filter: drop-shadow(0 0 14px var(--glow-color)) drop-shadow(0 0 24px var(--glow-color)); }
-  100% { filter: drop-shadow(0 0 6px var(--glow-color)); }
-}
-
-/* Desktop logo (no glow) */
-.logo-image {
-  display: none;
-  width: 220px;
-  height: auto;
-  margin-bottom: 1.5rem;
-}
-
-/* Form styling */
 form {
   margin-top: 1rem;
   display: flex;
@@ -76,36 +47,32 @@ form {
 }
 
 input {
-  padding: 0.6rem;
-  width: 260px;
-  font-size: 1rem;
-  border: 1px solid #666;
+  padding: 0.5rem;
   border-radius: 6px;
-  background-color: #111;
-  color: var(--text-color);
-}
-
-input::placeholder {
-  color: #bbb;
+  border: 1px solid #999;
+  font-size: 1rem;
+  width: 250px;
+  background: #111;
+  color: #fff;
 }
 
 button[type="submit"] {
-  background-color: var(--glow-color);
-  color: white;
+  background: var(--glow-color);
+  color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
-  border-radius: 6px;
   font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
-button[type="submit"]:hover {
-  background-color: #8a3dfd;
+
+button:hover {
+  background: #9333ea;
 }
 
-/* Instagram icon */
 .instagram-link {
-  margin-top: 1.8rem;
+  margin-top: 20px;
   display: inline-block;
 }
 
@@ -115,13 +82,36 @@ button[type="submit"]:hover {
   filter: drop-shadow(0 0 6px var(--glow-color));
 }
 
-/* Desktop override styles */
-@media screen and (min-width: 768px) {
-  .logo-image {
-    display: block;
-  }
+/* Mobile Bolt */
+.mobile-bolt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
 
-  #mobile-bolt-container {
+.mobile-bolt {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 12px #a855f7) drop-shadow(0 0 24px #a855f7);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 6px #a855f7);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px #a855f7) drop-shadow(0 0 24px #a855f7);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #a855f7);
+  }
+}
+
+/* Desktop Overrides */
+@media screen and (min-width: 768px) {
+  .mobile-bolt-container {
     display: none;
   }
 }
