@@ -126,23 +126,25 @@ button:hover {
     100% { filter: drop-shadow(0 0 6px #a855f7); }
   }
 }
-
 /* DESKTOP */
 @media screen and (min-width: 768px) {
-  .mobile-bolt-container {
-    display: none;
-  }
-
   .desktop-logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px; /* moved down */
+    margin-top: 80px;
     margin-bottom: 1rem;
   }
 
   .desktop-logo {
-  width: 260px;
-  height: auto;
+    width: 260px;
+    height: auto;
+  }
 }
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .desktop-logo-container {
+    display: none;
+  }
 }
