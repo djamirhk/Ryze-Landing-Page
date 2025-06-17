@@ -32,7 +32,7 @@ body, html {
   position: relative;
 }
 
-/* Mobile-only padding so content doesn't overlap fixed bolt */
+/* Mobile padding to prevent overlap with fixed bolt */
 @media (max-width: 767px) {
   .container {
     padding-top: 180px;
@@ -90,7 +90,7 @@ button:hover {
   filter: drop-shadow(0 0 6px var(--glow-color));
 }
 
-/* MOBILE VIEW */
+/* ✅ MOBILE VIEW */
 @media (max-width: 767px) {
   .mobile-bolt-container {
     display: block;
@@ -125,6 +125,10 @@ button:hover {
     margin-bottom: 0.5rem;
   }
 
+  .desktop-logo-container {
+    display: none; /* ✅ Hide preview.JPG on mobile */
+  }
+
   @keyframes pulseGlow {
     0% { filter: drop-shadow(0 0 6px #a855f7); }
     50% { filter: drop-shadow(0 0 16px #a855f7) drop-shadow(0 0 24px #a855f7); }
@@ -132,7 +136,7 @@ button:hover {
   }
 }
 
-/* DESKTOP VIEW */
+/* ✅ DESKTOP VIEW */
 @media screen and (min-width: 768px) {
   .mobile-bolt-container,
   .mobile-title,
@@ -151,6 +155,7 @@ button:hover {
   .desktop-logo {
     width: 240px;
     height: auto;
-    filter: drop-shadow(0 0 8px #a259ff);
+    /* ❌ No glow anymore */
+    filter: none;
   }
 }
