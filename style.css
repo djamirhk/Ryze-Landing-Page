@@ -15,9 +15,26 @@ body {
   padding: 20px;
 }
 
-.logo {
+.logo-mobile {
+  display: block;
   width: 200px;
   margin-top: 20px;
+}
+
+.logo-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .logo-mobile {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: block;
+    width: 500px;
+    margin-top: 30px;
+  }
 }
 
 .coming-soon {
