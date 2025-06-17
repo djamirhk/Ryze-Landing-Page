@@ -142,7 +142,7 @@ button:hover {
   }
 
   .desktop-logo {
-    width: 180px;  /* smaller */
-    height: auto;
-  }
+  width: 180px;  /* previously 140px */
+  height: auto;
+}
 }
