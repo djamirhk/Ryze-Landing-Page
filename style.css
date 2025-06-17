@@ -37,11 +37,12 @@ html, body {
   transform-style: preserve-3d;
   display: block;
 
-  /* STRONG Glow effect for iPhone/mobile */
+  /* ULTRA glow effect */
   filter:
     drop-shadow(0 0 10px var(--glow-color))
-    drop-shadow(0 0 20px var(--glow-color))
-    drop-shadow(0 0 30px var(--glow-color));
+    drop-shadow(0 0 25px var(--glow-color))
+    drop-shadow(0 0 40px var(--glow-color))
+    drop-shadow(0 0 60px var(--glow-color));
 }
 
 .logo-image {
