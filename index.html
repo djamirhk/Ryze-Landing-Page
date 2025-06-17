@@ -5,90 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryze Records</title>
   <link rel="icon" type="image/png" href="favicon-32x32.png" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h2 class="coming-soon">COMING SOON.</h2>
-    <img src="IMG_0052.png" alt="Ryze Records Logo" class="logo" />
-    <h1>RYZE RECORDS</h1>
-    <p class="tagline">A lift up from your downs</p>
-    <p class="footer">Since 2025</p>
-  </div>
-</body>
-</html>
-<!-- Open Graph Tags for iMessage & Social Preview -->
-<meta property="og:title" content="Ryze Records" />
-<meta property="og:description" content="Official site of Ryze Records – Music, Artists, and More." />
-<meta property="og:image" content="https://ryzerecords.com/preview.JPG" />
-<meta property="og:url" content="https://ryzerecords.com" />
-<meta property="og:type" content="website" />
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryze Records</title>
 
-  <!-- Open Graph Meta Tags for Link Previews -->
+  <!-- Open Graph Tags for iMessage & Social Preview -->
   <meta property="og:title" content="Ryze Records" />
-  <meta property="og:description" content="A lift up from your downs. Since 2025." />
+  <meta property="og:description" content="Official site of Ryze Records – Music, Artists, and More." />
   <meta property="og:image" content="https://ryzerecords.com/preview.JPG" />
   <meta property="og:url" content="https://ryzerecords.com" />
   <meta property="og:type" content="website" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       background-color: #000;
       color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
       text-align: center;
-      padding: 0 20px;
+    }
+
+    .container {
+      padding: 20px;
     }
 
     .logo {
-      max-width: 600px;
-      width: 100%;
-      margin: 40px 0 20px;
+      max-width: 90vw;
+      width: 500px;
+      margin: 30px 0;
+    }
+
+    .coming-soon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 3rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
-
-    h2 {
       font-size: 2rem;
-      font-weight: 500;
-      margin-top: 20px;
+      margin: 10px 0;
     }
 
-    p {
+    .tagline {
       font-size: 1rem;
-      margin-top: 10px;
-      color: #888;
+      color: #aaa;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        width: 600px;
+      }
+
+      .coming-soon {
+        font-size: 3rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <h1>COMING SOON.</h1>
-  <img src="preview.JPG" alt="Ryze Records Logo" class="logo" />
-  <h2>RYZE RECORDS</h2>
-  <p>A lift up from your downs</p>
-  <p>Since 2025</p>
-
+  <div class="container">
+    <h2 class="coming-soon">COMING SOON.</h2>
+    <img src="preview.JPG" alt="Ryze Records Logo" class="logo" />
+    <h1>RYZE RECORDS</h1>
+    <p class="tagline">A lift up from your downs</p>
+    <p class="footer">Since 2025</p>
+  </div>
 </body>
 </html>
