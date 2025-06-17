@@ -1,39 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryze Records</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     :root[data-theme='dark'] {
       --bg-color: #000;
       --text-color: #fff;
       --glow-color: #a259ff;
     }
-    :root[data-theme='light'] {
-      --bg-color: #f5f5f5;
-      --text-color: #111;
-      --glow-color: #7c3aed;
-    }
 
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
       background-color: var(--bg-color);
       color: var(--text-color);
       font-family: 'Helvetica Neue', sans-serif;
-      transition: background 0.4s ease, color 0.4s ease;
       text-align: center;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
+      overflow-x: hidden;
     }
 
     .container {
@@ -51,21 +36,16 @@
       margin-bottom: 1rem;
     }
 
-    .logo-glow {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .bolt {
       width: 100px;
       height: auto;
+      animation: spinY 6s linear infinite;
       filter: drop-shadow(0 0 25px var(--glow-color));
-      animation: spin 8s linear infinite;
+      transform-style: preserve-3d;
     }
 
-    .logo-desktop {
-      display: none;
+    .logo-image {
+      margin-top: 1rem;
       width: 220px;
       height: auto;
     }
@@ -90,38 +70,18 @@
     .instagram-link {
       margin-top: 20px;
       display: inline-block;
-      animation: pulse 2s infinite;
     }
 
     .instagram-icon {
       width: 36px;
       height: 36px;
-      fill: var(--text-color);
       transition: transform 0.3s ease, filter 0.3s ease;
+      filter: drop-shadow(0 0 6px var(--glow-color));
     }
 
     .instagram-link:hover .instagram-icon {
-      transform: scale(1.2) rotate(10deg);
+      transform: scale(1.15);
       filter: drop-shadow(0 0 10px var(--glow-color));
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: 2px solid var(--text-color);
-      color: var(--text-color);
-      padding: 6px 10px;
-      font-size: 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s, border 0.3s;
-    }
-
-    .theme-toggle:hover {
-      background: var(--text-color);
-      color: var(--bg-color);
     }
 
     form {
@@ -148,40 +108,20 @@
       font-size: 1rem;
       border-radius: 6px;
       cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    button[type="submit"]:hover {
-      transform: scale(1.05);
     }
 
     @keyframes spinY {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
-}
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    @media screen and (min-width: 768px) {
-      .logo-desktop { display: block; }
-      .logo-glow { display: none; }
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  <canvas id="starfield"></canvas>
   <div class="container">
     <h2 class="coming-soon">COMING SOON.</h2>
 
-    <div class="logo-glow">
-      <img src="IMG_0052.png" alt="Lightning Logo" class="bolt" />
-    </div>
-    <img src="preview.JPG" alt="Ryze Records Logo" class="logo-desktop" />
+    <img src="IMG_0052.png" alt="Lightning Bolt Logo" class="bolt" />
+    <img src="preview.JPG" alt="Ryze Logo" class="logo-image" />
 
     <h1>RYZE RECORDS</h1>
     <p class="tagline">A lift up from your downs</p>
@@ -196,72 +136,12 @@
 
     <!-- Instagram -->
     <a href="https://instagram.com/ryzerecs" class="instagram-link" target="_blank" aria-label="Instagram">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="instagram-icon">
-        <path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.3 2.3.6.5.3.9.7 1.2 1.2.3.4.5 1.1.6 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.9-.6 2.3-.3.5-.7.9-1.2 1.2-.4.3-1.1.5-2.3.6-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.3-2.3-.6-.5-.3-.9-.7-1.2-1.2-.3-.4-.5-1.1-.6-2.3-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.9.6-2.3.3-.5.7-.9 1.2-1.2.4-.3 1.1-.5 2.3-.6C8.4 2.2 8.8 2.2 12 2.2z"/>
-        <path fill="currentColor" d="M12 5.8A6.2 6.2 0 1 0 12 18.2 6.2 6.2 0 1 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 1 1 0 8z"/>
-        <circle cx="18.4" cy="5.6" r="1.4" fill="currentColor"/>
-      </svg>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="instagram-icon" alt="Instagram" />
     </a>
   </div>
 
   <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-    }
-
-    // Starfield animation
-    const canvas = document.getElementById('starfield');
-    const ctx = canvas.getContext('2d');
-    let stars = [];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    function createStars(count) {
-      stars = [];
-      for (let i = 0; i < count; i++) {
-        stars.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          z: Math.random() * canvas.width
-        });
-      }
-    }
-
-    function animateStars() {
-      ctx.fillStyle = getComputedStyle(document.body).getPropertyValue('--bg-color');
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = "#fff";
-      for (let star of stars) {
-        let k = 128.0 / star.z;
-        let x = star.x * k + canvas.width / 2;
-        let y = star.y * k + canvas.height / 2;
-
-        if (x >= 0 && x < canvas.width && y >= 0 && y < canvas.height) {
-          let size = (1 - star.z / canvas.width) * 3;
-          ctx.beginPath();
-          ctx.arc(x, y, size, 0, Math.PI * 2);
-          ctx.fill();
-        }
-
-        star.z -= 2;
-        if (star.z <= 0) {
-          star.z = canvas.width;
-        }
-      }
-
-      requestAnimationFrame(animateStars);
-    }
-
-    createStars(300);
-    animateStars();
+    // Theme toggle removed
   </script>
 </body>
 </html>
