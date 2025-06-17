@@ -114,4 +114,22 @@ button:hover {
   .mobile-bolt-container {
     display: none;
   }
+
+  .desktop-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .desktop-logo {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-logo-container {
+    display: none;
+  }
 }
